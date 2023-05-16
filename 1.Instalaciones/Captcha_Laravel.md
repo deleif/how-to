@@ -1,4 +1,4 @@
-# INSTALAR GOOGLE CAPTCHA EN Laravel
+# INSTALAR GOOGLE CAPTCHA EN LARAVEL
 * Ejecuta el siguiente comando para instalar la biblioteca NoCaptcha a través de Composer:
 
 ```

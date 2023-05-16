@@ -26,7 +26,7 @@ Una vez que tengas las claves, abre el archivo .env en la raíz de tu proyecto L
 
 Luego, en el archivo resources/views/auth/login.blade.php, agrega el siguiente código antes del botón de inicio de sesión:
 
-> '<div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.sitekey') }}"></div>
+> ' <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.sitekey') }}"></div>
 
 *Agrega el script que Se genera con tus detalles clave. Usa este fragmento para obtener tokens de reCAPTCHA, que, luego, debe verificar el backend de tu aplicación.
 Es algo así:

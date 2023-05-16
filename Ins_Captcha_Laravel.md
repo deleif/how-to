@@ -25,8 +25,7 @@
 Una vez que tengas las claves, abre el archivo .env en la raíz de tu proyecto Laravel y agrega las siguientes variables de entorno:
 ``` 
 'NOCAPTCHA_SECRET=your-secret-key'
-```
-``` 
+
 'NOCAPTCHA_SITEKEY=your-site-key'
 ```
 

@@ -8,13 +8,13 @@
 > ''providers' => [
     // Otros proveedores de servicios...
     Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
-],'
+],
 
 * A continuación, en el mismo archivo config/app.php, agrega el siguiente alias de fachada en el arreglo aliases:
 > ''aliases' => [
     // Otros alias de fachada...
     'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
-],'
+],
 
 * Ahora, para configurar las credenciales del servicio reCAPTCHA de Google, ve a la página oficial de reCAPTCHA (https://www.google.com/recaptcha) y regístrate para obtener las claves del sitio (Site Key) y la clave secreta (Secret Key).
 Una vez que tengas las claves, abre el archivo .env en la raíz de tu proyecto Laravel y agrega las siguientes variables de entorno:
@@ -22,11 +22,11 @@ Una vez que tengas las claves, abre el archivo .env en la raíz de tu proyecto L
 > 'NOCAPTCHA_SITEKEY=your-site-key'
 
 * Ejecuta el siguiente comando para generar las vistas de autenticación de Laravel Fortify:
-> 'php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"'
+> 'php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
 
 Luego, en el archivo resources/views/auth/login.blade.php, agrega el siguiente código antes del botón de inicio de sesión:
 
-> '<div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.sitekey') }}"></div>'
+> '<div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.sitekey') }}"></div>
 
 *Agrega el script que Se genera con tus detalles clave. Usa este fragmento para obtener tokens de reCAPTCHA, que, luego, debe verificar el backend de tu aplicación.
 Es algo así:
@@ -37,4 +37,4 @@ grecaptcha.enterprise.ready(function() {
        ...
     });
 });
-</script>'
+</script>

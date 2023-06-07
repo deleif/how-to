@@ -14,13 +14,16 @@ docker pull postgis/postgis:9.6-3.1
 
 
 
-* Crea un contenedor a partir de la imagen de PostgreSQL 14.1. Configura el puerto y el nombre del contenedor
+* Crea un contenedor a partir de la imagen de PostgreSQL 14.1. Configura el puerto y el nombre del contenedor.
+La segunda opción es para configurar la persistencia de datos y el arranque automático del contenedor
 ```
 docker run --name mi-postgres -e POSTGRES_PASSWORD=mi-contrasena -p 5432:5432 -d postgres:14.1
 
+
+docker run --restart=unless-stopped -v E:\docker\bailin:/var/lib/postgresql/data --name dock_bailin -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres:14.1
 ```
 
-Para Postres 9.6
+Para Postgres 9.6
 
 ```
 docker run --name dock_araconc -e POSTGRES_PASSWORD=1234 -p 5434:5432 -d postgis/postgis:9.6-3.1

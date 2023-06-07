@@ -32,7 +32,7 @@ docker run --name dock_araconc -e POSTGRES_PASSWORD=1234 -p 5434:5432 -d postgis
 
 
 
-* Conéctate al contenedor utilizando docker exec:
+* Para la versión 14, conéctate al contenedor utilizando docker exec:
 ```
 docker exec -it mi-postgres bash
 

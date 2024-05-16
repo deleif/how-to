@@ -43,7 +43,7 @@ Luego, en el archivo resources/views/auth/login.blade.php, agrega el siguiente c
 * Agrega el script que Se genera con tus detalles clave. Usa este fragmento para obtener tokens de reCAPTCHA, que, luego, debe verificar el backend de tu aplicación.
 Es algo así:
 ```
-<script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld0Jw4mAAAAAIOXNGXof87Hr811X9MES5Lbuy7p"></script>
+<script src="https://www.google.com/recaptcha/enterprise.js?render=**********YOUR KEY*****"></script>
 <script>
 grecaptcha.enterprise.ready(function() {
     grecaptcha.enterprise.execute(xxxxxxxxxxxxxxxxxxxxxxxxxxxx, {action: 'login'}).then(function(token) {

@@ -1,4 +1,51 @@
 
+## Configuración inicial del proyecto
+
+### 1. Crear un nuevo proyecto Laravel
+
+```bash
+composer create-project laravel/laravel nombre-del-proyecto
+cd nombre-del-proyecto
+```
+
+### 2. Instalar Jetstream
+
+```bash
+composer require laravel/jetstream
+```
+
+### 3. Instalar Jetstream con Livewire
+
+```bash
+php artisan jetstream:install livewire
+```
+
+### 4. Instalar dependencias del frontend
+
+```bash
+npm install
+```
+
+### 5. Compilar los assets
+
+```bash
+npm run build
+```
+
+### 6. Ejecutar migraciones de base de datos
+
+```bash
+php artisan migrate
+```
+
+### 7. Iniciar el servidor de desarrollo
+
+```bash
+php artisan serve
+```
+
+---
+
 # Proyecto Laravel con AdminLTE
 
 Este proyecto utiliza Laravel como framework backend y el paquete [Laravel-AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE) para la interfaz de administración.

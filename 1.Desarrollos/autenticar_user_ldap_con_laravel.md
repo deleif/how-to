@@ -15,7 +15,7 @@ cd nombre-del-proyecto
 composer require laravel/jetstream
 php artisan jetstream:install livewire
 npm install && npm run build
-php artisan migrate
+
 ```
 
 ---
@@ -204,6 +204,13 @@ class AddLdapColumnsToUsersTable extends Migration
         );
     }
 }
+
+Luego ejecuta las migraciones:
+
+```bash
+php artisan migrate
+```
+
 ```
 
 ---

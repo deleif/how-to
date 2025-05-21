@@ -113,7 +113,21 @@ class HomeController extends Controller
 }
 ```
 
-### 2.4 Crear la vista de administrador
+### 2.4 Instalar el paquete AdminLTE
+
+Instala el paquete con Composer:
+
+```bash
+composer require jeroennoten/laravel-adminlte
+```
+
+Y luego ejecuta el instalador:
+
+```bash
+php artisan adminlte:install
+```
+
+### 2.5 Crear la vista de administrador
 
 Crea la vista `resources/views/admin/index.blade.php` y agrega el siguiente contenido:
 
@@ -138,20 +152,6 @@ Crea la vista `resources/views/admin/index.blade.php` y agrega el siguiente cont
 @section('js')
     <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
 @stop
-```
-
-### 2.5 Instalar el paquete AdminLTE
-
-Instala el paquete con Composer:
-
-```bash
-composer require jeroennoten/laravel-adminlte
-```
-
-Y luego ejecuta el instalador:
-
-```bash
-php artisan adminlte:install
 ```
 
 ---

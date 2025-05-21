@@ -1,44 +1,48 @@
 
-## Configuración inicial del proyecto
+# Proyecto Laravel con AdminLTE
 
-### 1. Crear un nuevo proyecto Laravel
+Este proyecto utiliza Laravel como framework backend y el paquete [Laravel-AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE) para la interfaz de administración.
+
+## 1. Configuración inicial del proyecto
+
+### 1.1 Crear un nuevo proyecto Laravel
 
 ```bash
 composer create-project laravel/laravel nombre-del-proyecto
 cd nombre-del-proyecto
 ```
 
-### 2. Instalar Jetstream
+### 1.2 Instalar Jetstream
 
 ```bash
 composer require laravel/jetstream
 ```
 
-### 3. Instalar Jetstream con Livewire
+### 1.3 Instalar Jetstream con Livewire
 
 ```bash
 php artisan jetstream:install livewire
 ```
 
-### 4. Instalar dependencias del frontend
+### 1.4 Instalar dependencias del frontend
 
 ```bash
 npm install
 ```
 
-### 5. Compilar los assets
+### 1.5 Compilar los assets
 
 ```bash
 npm run build
 ```
 
-### 6. Ejecutar migraciones de base de datos
+### 1.6 Ejecutar migraciones de base de datos
 
 ```bash
 php artisan migrate
 ```
 
-### 7. Iniciar el servidor de desarrollo
+### 1.7 Iniciar el servidor de desarrollo
 
 ```bash
 php artisan serve
@@ -46,53 +50,13 @@ php artisan serve
 
 ---
 
-# Proyecto Laravel con AdminLTE
+## 2. Instalación y configuración de AdminLTE
 
-Este proyecto utiliza Laravel como framework backend y el paquete [Laravel-AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE) para la interfaz de administración.
-
-## Pasos de instalación y configuración
-
-### 1. Instalar dependencias del frontend
-
-Ejecuta el siguiente comando para instalar las dependencias de Node:
-
-```bash
-npm install
-```
-
-### 2. Compilar los assets
-
-Una vez instaladas las dependencias, compila los archivos del frontend:
-
-```bash
-npm run build
-```
-
-### 3. Ejecutar migraciones de base de datos
-
-Aplica las migraciones con el comando:
-
-```bash
-php artisan migrate
-```
-
-### 4. Iniciar el servidor de desarrollo
-
-Levanta el servidor local con:
-
-```bash
-php artisan serve
-```
-
----
-
-## Instalación y configuración de AdminLTE
-
-### 1. Crear el archivo de rutas `admin.php`
+### 2.1 Crear el archivo de rutas `admin.php`
 
 En el directorio `routes`, crea un nuevo archivo llamado `admin.php` donde definirás las rutas para el panel de administración.
 
-### 2. Registrar las rutas de administrador
+### 2.2 Registrar las rutas de administrador
 
 Edita el archivo `bootstrap/app.php` e incluye el archivo `admin.php` en el bloque de configuración de rutas:
 
@@ -122,7 +86,7 @@ return Application::configure(basePath: dirname(__DIR__))
     })->create();
 ```
 
-### 3. Crear el controlador para el panel de administración
+### 2.3 Crear el controlador para el panel de administración
 
 Ejecuta el siguiente comando para generar el controlador:
 
@@ -149,7 +113,7 @@ class HomeController extends Controller
 }
 ```
 
-### 4. Crear la vista de administrador
+### 2.4 Crear la vista de administrador
 
 Crea la vista `resources/views/admin/index.blade.php` y agrega el siguiente contenido:
 
@@ -176,7 +140,7 @@ Crea la vista `resources/views/admin/index.blade.php` y agrega el siguiente cont
 @stop
 ```
 
-### 5. Instalar el paquete AdminLTE
+### 2.5 Instalar el paquete AdminLTE
 
 Instala el paquete con Composer:
 
@@ -192,7 +156,7 @@ php artisan adminlte:install
 
 ---
 
-## Notas finales
+## 3. Notas finales
 
 - Asegúrate de tener autenticación habilitada, ya que las rutas de administrador están protegidas con middleware `auth`.
 - Puedes personalizar la plantilla de AdminLTE editando los archivos de configuración generados tras la instalación.
